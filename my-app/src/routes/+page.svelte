@@ -3,7 +3,7 @@
     import Footer from "../components/Footer.svelte";
     import Chart from "../components/Chart.svelte";
     import Filter from "../components/Filter.svelte";
-    import Albums from "../components/Albums.svelte";
+    // import Albums from "../components/Albums.svelte";
     // import Test from "../components/Test.svelte";
     // import Test2 from "../components/Test2.svelte";
     
@@ -12,7 +12,7 @@
  <main>
     <Header />
     <!-- <Filter /> -->
-    <Albums />
+    <!-- <Albums /> -->
     <Chart />
     <!-- <Test />
     <Test2 /> -->
