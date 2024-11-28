@@ -1,4 +1,4 @@
-<h1>Tech Travk: Spotify Album Fetcher</h1>
+<h1>Tech Track: Spotify Album Fetcher</h1>
 <h2>Description</h2>
 <p>Spotify Album Fetcher is a web application that allows users to fetch albums of their favorite 
   artists directly from Spotify using the Spotify API. This application uses Spotify's Client Credentials
