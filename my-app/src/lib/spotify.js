@@ -1,6 +1,6 @@
 export const getAccessToken = async () => {
-  const clientId = 'ab9e777a63784d36b86e403969d0ef85';  // Vervang door je eigen Spotify Client ID
-  const clientSecret = '4ca068ef035d4109987c5aae1f434214';  // Vervang door je eigen Spotify Client Secret
+  const clientId = '9e45ac2557ba400e8c497c99b5d26504';  // Vervang door je eigen Spotify Client ID
+  const clientSecret = '1908ab4103c8468ea7c94334a4ae26d9';  // Vervang door je eigen Spotify Client Secret
 
   const credentials = btoa(`${clientId}:${clientSecret}`);  // Base64 encoding van de Client ID en Secret
 
