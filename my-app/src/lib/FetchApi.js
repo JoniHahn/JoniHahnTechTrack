@@ -1,5 +1,5 @@
-const clientId = "9e45ac2557ba400e8c497c99b5d26504"; // Vervang door je eigen Client ID
-const clientSecret = "1908ab4103c8468ea7c94334a4ae26d9"; // Vervang door je eigen Client Secret
+const clientId = process.env.SPOTIFY_CLIENT_ID;
+const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 
 async function getAccessToken() {
   const credentials = btoa(`${clientId}:${clientSecret}`);
