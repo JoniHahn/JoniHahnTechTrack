@@ -18,3 +18,5 @@
 </ul>
 <h2>Usage</h2>
 <p>From the dropdown select artist and click on Fetch Albums it wil generate a horizontal bar chart with the chosen artist and all there albums</p>
+<h2>Link</h2>
+https://joni-hahn-tech-track.vercel.app/
