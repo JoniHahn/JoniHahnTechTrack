@@ -10,6 +10,6 @@
     }
 </style>
 
-<p>&copy; 2024 Taylor Swift Data Visualization. All rights reserved.</p>
+<p>&copy; 2024 multipule artist albums. All rights reserved.</p>
   <p>Data sourced from <a href="https://developer.spotify.com/documentation/web-api" target="_blank" style="color: #1e90ff;">Spotify API</a></p>
   <p>Created by [Joni Sara Hahn].</p>
