@@ -9,9 +9,9 @@
     <Header/>
     <BarChart />
     <Footer />
- 
-    
-
 <style>
-
+    :global(body) {
+    background-color: #212121;
+    margin: 1em;
+   }
 </style>
