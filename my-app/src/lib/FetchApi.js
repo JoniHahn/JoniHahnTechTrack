@@ -19,41 +19,37 @@ async function getAccessToken() {
   return data.access_token;
 }
 
-async function fetchAlbums(artistIds) {
+async function searchArtists(query, limit = 10) {
   try {
     const token = await getAccessToken();
-    let allAlbums = [];
-
-    for (const [artistName, artistId] of Object.entries(artistIds)) {
-      const response = await fetch(
-        `https://api.spotify.com/v1/artists/${artistId}/albums?limit=50`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
-      const data = await response.json();
-      if (!response.ok) {
-        throw new Error(data.error || `Kon albums niet ophalen voor ${artistName}`);
+    const response = await fetch(
+      `https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=artist&limit=${limit}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       }
+    );
 
-      allAlbums = [
-        ...allAlbums,
-        ...data.items.map((album) => ({
-          name: album.name,
-          artist: artistName,
-          totalTracks: album.total_tracks, 
-        })),
-      ];
+    const data = await response.json();
+    if (!response.ok || !data.artists) {
+      throw new Error(data.error?.message || "Kon artiesten niet ophalen.");
     }
 
-    return allAlbums;
+    return data.artists.items.map((artist) => ({
+      id: artist.id,
+      name: artist.name,
+      followers: artist.followers.total,
+      popularity: artist.popularity,
+      image: artist.images[0]?.url || "",
+    }));
   } catch (error) {
-    console.error("Fout bij het ophalen van albums:", error);
+    console.error("Fout bij het zoeken naar artiesten:", error);
     throw error;
   }
 }
 
-export { fetchAlbums };
+// No longer need fetchAlbums since we're only showing artist data now.
+
+export { searchArtists };
+
